@@ -4,11 +4,24 @@
 	<title>View Package</title>
 	 
 </head>
-<body>
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<table class="table">
+<style >
+	div.Package{
+		margin-top: 20px;
+		margin-right: 250px;
+		margin-left: 250px;
+
+	}
+</style>
+
+<title>View Packages</title>
+<center>
+
+	<div class="Package">
+        <div class="card card-feedback mx-auto mt-5" >
+          <form class="" action="{{route('Package_SaveData')}}" method="post">
+          {{csrf_field()}}
+            <table class="table table-hover">
+              <div class="card-header"><b>PACKAGE DETAILS</b></div>
 					<thead>
 					    <tr>
 					      <th scope="col">Package No</th>

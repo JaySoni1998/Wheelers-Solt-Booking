@@ -28,7 +28,7 @@ class LocationController extends Controller
     	//simple display all data
     	
 
-    	return view('View_Location')->with('Locationpostdata',$post); 
+        return view('View_Location')->with('Locationpostdata',$post);
     }
 
     //delete
@@ -50,10 +50,10 @@ class LocationController extends Controller
     //save update
     public function SaveUpdate_Location(Request $request)
     {
-    	
+    	// dd($request->all());
     	//$post = location::find($Place_No);
 
-    	location::where("Place_No",$request->Place_No)->update([
+    	location::where("Place_No",$request->PlaceNo)->update([
     		"Place_No"=>$request->PlaceNo,
     		"Area_Code"=>$request->AreaCode,
     		"Location_Name"=>$request->Location,
@@ -63,4 +63,16 @@ class LocationController extends Controller
     	
     	return redirect('/View_Location');
     }
+
+    //report
+    public function Report_Location(Request $request)
+    {
+        //get all data
+        $post = location::all();
+        //simple display all data
+        
+
+        return view('Report_Location')->with('Locationpostdata',$post);
+    }
+
 }

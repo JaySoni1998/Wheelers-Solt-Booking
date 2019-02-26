@@ -4,9 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\add_plots_and_slots;
+use App\location;
 
 class PlotsSlotsController extends Controller
 {
+
+    public function showAddForm(request $request)
+        {
+            $Place=location::all();
+            return view('Add_Plots_&_Slots')->with('Place',$Place);
+        }
+        public function getLocation(Request $request)
+        {
+            $location=location::where("Location_Name",$request->Place_No)->get();
+            return response()->json([
+                "data"=>$location->toArray()
+            ]);
+        }
+
     //add method here
     public function Add_P_S(Request $request){
     	//only print requested params

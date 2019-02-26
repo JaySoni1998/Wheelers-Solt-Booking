@@ -1,25 +1,27 @@
 @extends('Layout.app')
 @section("main-content")
 
+
 <style >
-  div.staff{
-    margin-top: 20px;
-    margin-right: 100px;
-    margin-left: 100px;
+	div.Location{
+		margin-top: 20px;
+		margin-right: 100px;
+		margin-left: 100px;
 
-  }
+	}
 </style>
-<title>View Staff</title>
+
+<title>Staff Report</title>
 <center>
-
-  <div class="staff">
+	<div class="Location">
         <div class="card card-feedback mx-auto mt-5" >
-          <form class="" action="{{route('Staff_SaveData')}}" method="post">
-          {{csrf_field()}}
             <table class="table table-hover">
-              <div class="card-header"><b>STAFF DETAILS</b></div>
-
-                      <thead>
+              	<div class="card-header"><b>STAFF DETAILS</b></div>
+               		<div class="card-header">
+ 	
+               			<input class="form-control" type="text" placeholder="Search" aria-label="Search" id="myInput" onkeyup="myFunction()" title="Type in a name">
+               		
+					<thead>
                         <tr>
                           <th scope="col">ID</th>
                           <th scope="col">Name</th>
@@ -29,13 +31,11 @@
                           <th scope="col">Joining Date</th>
                           <th scope="col">Birth Date</th>
                           <th scope="col">Address</th>
-                          <th scope="col">Delete</th>
-                          <th scope="col">Update</th>
                         </tr>
                       </thead>
 
-                      <tbody>
-                        @foreach($Staff_ViewData as $post)
+                      <tbody id="myTable">
+                        @foreach($Staffpostdata as $post)
                         <tr>
                             <th scope="row">{{$post->Emp_ID}}</th>
                             <td>{{$post->Emp_Name}}</td>
@@ -45,20 +45,35 @@
                             <td>{{$post->Join_Date}}</td>
                             <td>{{$post->DOB}}</td>
                             <td>{{$post->Address}}</td>
-                            <td><a  href="{{route('Staff_DeleteData',['Emp_ID'=>$post->Emp_ID])}}">Delete</a></td>
-                            <td><a href="{{route('Staff_UpdateData',['Emp_ID'=>$post->Emp_ID])}}">Update</a></td>
                           </tr>
                         @endforeach
                        
                       </tbody>
-                    </div>
+				</div>
+					
+				</table>
+				<div class="card-footer">
+						<tr>
+   							<td colspan="4">
+					  			<a href="" name="Print" title="print" alt="print" onclick="window.print();" target="_blank" style="cursor:pointer;">Print</a>
+					  		</td>
+					  	</tr>
+				</div>
 
-              </table>
+			</div>
+		</div>
+	</div>
+</center>
 
-            </div>
-          </div>
-          
-        </div>
-      
-    </center>
-  @endsection
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+@endsection

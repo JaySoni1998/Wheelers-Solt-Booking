@@ -63,5 +63,16 @@ class PackageController extends Controller
     	return redirect('/View_Package');
     }
 
+    //report
+    public function Report_Package(Request $request)
+    {
+        //get all data
+        $post = package_details::all();
+        //simple display all data
+        
+
+        return view('Report_Package')->with('Packagepostdata',$post);
+    }
+
 
 }

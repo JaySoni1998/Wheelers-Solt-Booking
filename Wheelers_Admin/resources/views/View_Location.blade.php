@@ -1,11 +1,26 @@
 @extends('Layout.app')
 @section("main-content")
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				
-				<table class="table">
+
+<style >
+	div.Location{
+		margin-top: 20px;
+		margin-right: 250px;
+		margin-left: 250px;
+
+	}
+</style>
+
+<title>View Location</title>
+<center>
+
+	<div class="Location">
+        <div class="card card-feedback mx-auto mt-5" >
+          <form class="" action="{{route('Location_SaveData')}}" method="post">
+          {{csrf_field()}}
+            <table class="table table-hover">
+              <div class="card-header"><b>LOCATION DETAILS</b> </div>
 					<thead>
+						
 					    <tr>
 					      <th scope="col">Place No</th>
 					      <th scope="col">Area Code</th>
@@ -35,4 +50,5 @@
 		</div>
 		
 	</div>
+	</center>
 @endsection

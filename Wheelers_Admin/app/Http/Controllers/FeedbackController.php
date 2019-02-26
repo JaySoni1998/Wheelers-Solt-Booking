@@ -13,6 +13,11 @@ class FeedbackController extends Controller
     	$posts = feedback::all();
     	//simple display all data
     	return view('View_Feedback')->with('Feedback_ViewData',$posts); 
+
+        /*$data = DB::table("feedback")
+          ->select("feedback.U_ID", DB::raw("SELECT user_registration.U_ID FROM user_registration")
+          ->get();
+*/
     }
 
     //delete
@@ -21,5 +26,16 @@ class FeedbackController extends Controller
 
     	feedback::where('F_ID',$P_No)->delete();
     	return redirect('/View_Feedback');
+    }
+
+    //report
+    public function Report_Feedback(Request $request)
+    {
+        //get all data
+        $post = feedback::all();
+        //simple display all data
+        
+
+        return view('Report_Feedback')->with('Feedbackpostdata',$post);
     }
 }

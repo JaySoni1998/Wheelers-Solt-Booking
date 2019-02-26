@@ -61,7 +61,7 @@ class StaffController extends Controller
     	//$post = package_details::find($Emp_ID);
 
     	staff_details::where("Emp_ID",$request->Emp_ID)->update([
-    		"Emp_Name"=>$request->Emp_Name,
+    		"Emp_Name"=>$request->StaffName,
     		"Gender"=>$request->Gender,
     		"Mob_No"=>$request->Mob_No,
     		"Email_ID"=>$request->Email_ID,
@@ -72,6 +72,17 @@ class StaffController extends Controller
     	]);
     	
     	return redirect('/View_Staff');
+    }
+
+    //report
+    public function Report_Staff(Request $request)
+    {
+        //get all data
+        $post = staff_details::all();
+        //simple display all data
+        
+
+        return view('Report_Staff')->with('Staffpostdata',$post);
     }
 
 }
