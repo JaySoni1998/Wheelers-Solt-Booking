@@ -12,9 +12,11 @@ class location extends Model
     //all col
     protected $fillable = [
     	"Place_No",
+    	"Parking_Place_Name",
+    	"Address",
     	"Area_Code",
-    	"Location_Name",
-    	"parking_Place",
+        "Latitude",
+        "Longitude",
     	"created_at",
     	"updated_at"
     ];

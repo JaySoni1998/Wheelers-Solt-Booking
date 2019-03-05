@@ -13,9 +13,13 @@ class LocationController extends Controller
     	//save data  to table
     	$post = location::create([
     		"Place_No"=>$request->PlaceNo,
+            "Parking_Place_Name"=>$request->ParkingPlace,
+            "Address"=>$request->Location,
     		"Area_Code"=>$request->AreaCode,
-    		"Location_Name"=>$request->Location,
-	    	"parking_Place"=>$request->ParkingPlace
+            "Latitude"=>$request->Lat,
+            "Longitude"=>$request->Long
+    		
+	    	
     	]);
     	return redirect('/View_Location');
     }
@@ -55,9 +59,11 @@ class LocationController extends Controller
 
     	location::where("Place_No",$request->PlaceNo)->update([
     		"Place_No"=>$request->PlaceNo,
-    		"Area_Code"=>$request->AreaCode,
-    		"Location_Name"=>$request->Location,
-	    	"parking_Place"=>$request->ParkingPlace
+            "Parking_Place_Name"=>$request->ParkingPlace,
+            "Address"=>$request->Location,
+            "Area_Code"=>$request->AreaCode,
+            "Latitude"=>$request->Lat,
+            "Longitude"=>$request->Long
 
     	]);
     	

@@ -18,6 +18,9 @@
         .Submit_btn{
           margin-bottom: 10px;
         }
+        body{
+          margin-bottom: 50px;
+        }
 
       </style>
 
@@ -63,4 +66,5 @@
       </div>
       
     </center>
+  </body>
   @endsection

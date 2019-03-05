@@ -9,9 +9,19 @@
 		margin-left: 100px;
 
 	}
+	tr.heading {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 125px;
+    height: 25px;
+	}
+	body{
+	  margin-bottom: 50px;
+	}
 </style>
 
 <title>Reprot Report</title>
+<body>
 <center>
 	<div class="Location">
         <div class="card card-feedback mx-auto mt-5" >
@@ -20,9 +30,9 @@
                		<div class="card-header">
  	
                			<input class="form-control" type="text" placeholder="Search" aria-label="Search" id="myInput" onkeyup="myFunction()" title="Type in a name">
-               		
+               		</div>
 					<thead >
-					    <tr>
+					    <tr class="heading">
 					      <th scope="col">Package No</th>
 					      <th scope="col">Package Name</th>
 					      <th scope="col">Discount</th>
@@ -39,19 +49,19 @@
 					  </tbody>
 				</div>
 					
-				</table>
-				<div class="card-footer">
-						<tr>
-   							<td colspan="4">
-					  			<a href="" name="Print" title="print" alt="print" onclick="window.print();" target="_blank" style="cursor:pointer;">Print</a>
-					  		</td>
-					  	</tr>
-				</div>
-
+			</table>
+			<div class="card-footer">
+				<tr>
+   					<td colspan="4">
+					<a href="" name="Print" title="print" alt="print" onclick="window.print();" target="_blank" style="cursor:pointer;">Print</a>
+					</td>
+			  	</tr>
 			</div>
+
 		</div>
 	</div>
 </center>
+</body>
 
 <script>
 $(document).ready(function(){

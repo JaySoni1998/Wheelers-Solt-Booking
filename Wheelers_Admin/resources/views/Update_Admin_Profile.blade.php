@@ -22,11 +22,14 @@
     {
       border-radius: 50%;
     }
+    body{
+      margin-bottom: 50px;
+    }
 
   </style>
 
 <title>Admin Profile</title>
-
+<body>
   <center>
     <div class="AdminProfile">
       <div class="card card-profile mx-auto mt-5" >
@@ -40,7 +43,7 @@
                   <tr>
                     <div class="col-sm-6" style="margin: 10px;">
                       <div  align="center"> 
-                        <img class="admin_img" src="{{ asset($post->img) }}" id="profile-image1"/>
+                        <img class="admin_img" src="{{url('Images/Admin.jpg ')}}" id="profile-image1"/>
                       </div>
                     </div>
                   </tr>            
@@ -85,4 +88,5 @@
       </div>
     </div>
   </center>
+</body>
 @endsection

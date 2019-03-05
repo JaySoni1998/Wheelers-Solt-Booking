@@ -14,6 +14,9 @@
     margin-left: 500px;
     margin-top: 150px;
   }
+  body{
+    margin-bottom: 50px;
+  }
 
 </style>
 
@@ -58,6 +61,7 @@
   </div>
 </div>
 </center>
+</body>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -66,4 +70,4 @@
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-</body>
+

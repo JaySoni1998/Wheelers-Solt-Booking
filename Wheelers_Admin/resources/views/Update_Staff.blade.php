@@ -7,6 +7,9 @@
           margin-left: 200px;
           margin-right: 200px;
         } 
+        body{
+        margin-bottom: 50px;
+      }
   		
     </style>
   <title>Update Staff</title>

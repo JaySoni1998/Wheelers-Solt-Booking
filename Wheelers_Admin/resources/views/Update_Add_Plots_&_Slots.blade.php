@@ -15,6 +15,9 @@
         .Submit_btn{
           margin-bottom: 10px;
         }
+        body{
+            margin-bottom: 50px;
+          }
 
       </style>
 <title>Upadate Plots & Slot</title>
@@ -80,9 +83,10 @@
             </table>
             </form>
         </div>
+      </div>
       
     </center>
-  </div>
+
 
   </body>
  @endsection

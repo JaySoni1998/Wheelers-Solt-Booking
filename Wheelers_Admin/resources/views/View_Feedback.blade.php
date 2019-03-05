@@ -8,6 +8,9 @@
 		margin-left: 250px;
 		margin-right: 250px;
 	}
+	body{
+		  margin-bottom: 50px;
+		}
 
 </style>
 

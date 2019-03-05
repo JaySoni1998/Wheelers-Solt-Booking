@@ -106,7 +106,7 @@
 			    	<li class="nav-item active">
 
       					<div class="appName">
-                  <img class="logo" height="50" width="50" src="Images\logo.png">
+                  <img src="{{url('Images/logo.png ')}}" height="50" width="50">
                   <label class="App_name"><b>Wheelers Slot Booking</b></label> 
                 </div>
             </li>
@@ -162,7 +162,7 @@
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="Images/Admin.jpg" style="height: 40px; width: 40px; border-radius: 50%; border:2px solid"></img></a>
+                <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="{{url('Images/Admin.jpg')}}" style="height: 40px; width: 40px; border-radius: 50%; border:2px solid"></img></a>
                 <div class="dropdown-menu">
                   <div class="profile">
                   <a class="dropdown-item" href="Admin_View_Profile">Profile</a>
@@ -171,7 +171,7 @@
                 </div>
                 </div>
               </li>
-              <a class="nav-link" href="notification"> <img src="Images/notification.png" style="height: 40px; width: 40px; border-radius: 50%"></img></a>
+              <a class="nav-link" href="notification"> <img src="{{url('Images/notification.png')}}" style="height: 40px; width: 40px; border-radius: 50%"></img></a>
 
             </ul>
           

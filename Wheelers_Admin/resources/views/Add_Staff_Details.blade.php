@@ -7,6 +7,9 @@
       margin-right: 250px;
       margin-left: 250px;
     }
+    body{
+      margin-bottom: 50px;
+    }
   </style>
 
 <title>Add New Staff</title>
@@ -79,4 +82,5 @@
         </div>
       </div>
     </center>
+  </body>
   @endsection

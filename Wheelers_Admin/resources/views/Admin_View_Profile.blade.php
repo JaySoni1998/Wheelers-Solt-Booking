@@ -2,10 +2,10 @@
 @section("main-content")
 
   <style>
-    div.AdminProfile{
+   div.AdminProfile{
       margin-top: 20px;
-      margin-right: 520px;
-      margin-left: 520px;
+      margin-right: 500px;
+      margin-left: 500px;
     }
 
     #profile-image1 {
@@ -22,11 +22,13 @@
     {
       border-radius: 50%;
     }
-
+    body{
+      margin-bottom: 50px;
+    }
   </style>
 
 <title>Admin Profile</title>
-
+<body>
     <center>
 
       <div class="AdminProfile">
@@ -101,4 +103,6 @@
         </div>
       </div>
     </center>
+  </body>
+
   @endsection

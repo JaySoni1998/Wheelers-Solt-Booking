@@ -9,9 +9,19 @@
 		margin-left: 100px;
 
 	}
+	tr.heading {
+	    white-space: nowrap;
+	    overflow: hidden;
+	    width: 125px;
+	    height: 25px;
+	}
+	body{
+	  margin-bottom: 50px;
+	}
 </style>
 
 <title>Feedback Report</title>
+<body>
 <center>
 	<div class="Location">
         <div class="card card-feedback mx-auto mt-5" >
@@ -22,7 +32,7 @@
                			<input class="form-control" type="text" placeholder="Search" aria-label="Search" id="myInput" onkeyup="myFunction()" title="Type in a name">
                		
 					<thead>
-					    <tr>
+					    <tr class="heading">
 					      <th scope="col">Feedback ID</th>
 					      <th scope="col">User Name</th>
 					      <th scope="col">Review</th>
@@ -53,6 +63,7 @@
 		</div>
 	</div>
 </center>
+</body>
 
 <script>
 $(document).ready(function(){

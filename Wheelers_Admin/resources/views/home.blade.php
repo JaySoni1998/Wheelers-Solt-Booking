@@ -5,11 +5,15 @@
   hr.line {
   border-top: 1px solid black;
 }
+body{
+  margin-bottom: 50px;
+}
 </style>
 
 <title>Home</title>
 
 <body>
+
     <div id="app">
     	<center>
       <div class="scan">
@@ -61,8 +65,6 @@
       </div>    
     </center>
 
-    <hr class="line"></hr>
-
     <center>
       <div class="New_booking_details" >
         <div class="Location">
@@ -76,64 +78,46 @@
                     <th scope="col"><font color="white">Name</font></th>
                     <th scope="col"><font color="white">Check In</font></th>
                     <th scope="col"><font color="white">Check Out</font></th>
-                    <th scope="col"><font color="white">Phone No</font></th>
                     <th scope="col"><font color="white">Vehicle Type</font></th>
+                    <th scope="col"><font color="white">Place Name</font></th>
                     </tr>
                 </thead>
 
                 <tbody>
                 <tr>
                   <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
+                    <td>Jay Soni</td>
+                    <td>12:00 PM</td>
+                    <td>02:00 PM</td>
+                    <td>2 Wheeler</td>
+                    <td>Alpha One Mall</td>
                   </tr>
 
                   <tr>
                     <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
+                    <td>Dhruvi Patel</td>
+                    <td>01:30 PM</td>
+                    <td>04:30 PM</td>
+                    <td>4 Wheeler</td>
+                    <td>Balaji Agora Mall</td>
                   </tr>
 
                   <tr>
                     <th scope="row">3</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>@fat</td>
-                      <td>@fat</td>
+                      <td>Krishan Shah</td>
+                      <td>10:00 AM</td>
+                      <td>01:00 PM</td>
+                      <td>2 Wheeler</td>
+                      <td>Himalaya Mall</td>
                   </tr>
 
                   <tr>
                     <th scope="row">4</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                  </tr>
-
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
-                  </tr>
-
-                  <tr>
-                    <th scope="row">6</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@fat</td>
-                    <td>@fat</td>
+                    <td>Jay Bhalodiya</td>
+                    <td>11:00 AM</td>
+                    <td>01:00 PM</td>
+                    <td>3 Wheeler</td>
+                    <td>D-Mart</td>
                   </tr>
                 </tbody>
               </div>
@@ -143,6 +127,8 @@
       </div>  
     </center>
     </div>
+    
+  </body>
 
     
     <script >
@@ -175,5 +161,7 @@
 		});
 
     </script>
-	</body>
+
+
+
   @endsection()
