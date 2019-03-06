@@ -6,12 +6,12 @@
     margin-top: 20px;
     margin-left: 400px;
     margin-right: 400px;
-  }     
+  }
 
   .checkbox{
     margin-left: 20px;
     margin-right: 20px;
-  } 
+  }
 
   .Submit_btn{
      margin-bottom: 10px;
@@ -20,7 +20,7 @@
     margin-bottom: 50px;
   }
 </style>
-<title>Add New Plots & Slots</title> 
+<title>Add New Plots & Slots</title>
 
 <body>
   <center>
@@ -33,7 +33,7 @@
             <tbody>
               <tr class="tr">
                 <div class="form-group" >
-                  <th scope="row" colspan="2" >Place No </th>    
+                  <th scope="row" colspan="2" >Place No </th>
                   <th>
                     <select name="Place_No" class="form-control" id="place">
                       <option value="" disabled="" selected=""> Select Place</option>
@@ -41,45 +41,45 @@
                       <option value="{{$p->id}}">{{$p->Place_No}}</option>
                       @endforeach
                     </select>
-                  </th>  
+                  </th>
                 </div>
               </tr>
-                
-              <tr>
-                <th scope="row" colspan="2">Location Name</th>
-                <th> <label>-</label> </th>
-              </tr>
-              
+
               <tr>
                 <th scope="row" colspan="2">Place Name</th>
                 <th> <label>-</label> </th>
               </tr>
-                
+
+              <tr>
+                <th scope="row" colspan="2">address</th>
+                <th> <label>-</label> </th>
+              </tr>
+
               <tr>
                 <th scope="row" colspan="2">Slot Number</th>
                 <th><input type="SlotNo" name="SlotNo" id="inputEmail" class="form-control" placeholder="Enter Slots Number" > </th>
               </tr>
-                
+
               <tr>
                 <th scope="row" colspan="2">Vehicle Type</th>
                 <td>
                   <div>
                     <input type="radio" name="VType" value="2 Wheeler"> 2 Wheeler&nbsp;&nbsp;&nbsp;
                     <input type="radio" name="VType" value="3 Wheeler"> 3 Wheeler&nbsp;&nbsp;&nbsp;
-                    <input type="radio" name="VType" value="4 Wheeler"> 4 Wheeler                     
+                    <input type="radio" name="VType" value="4 Wheeler"> 4 Wheeler
                   </div>
                 </td>
               </tr>
-                
+
               <tr>
                 <th scope="row" colspan="2">Number of Slot</th>
                 <th><input type="SlotofNo" name="NoOfSlot" id="inputEmail" class="form-control" placeholder="Enter Number of Slots" > </th>
               </tr>
-              
+
               <tr>
                 <th colspan="3"><center><input type="submit" class="btn btn-primary" id="submit" name="Submit"></center></th>
               </tr>
-                                
+
             </tbody>
           </table>
         </form>

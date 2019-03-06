@@ -5,12 +5,12 @@
           margin-top: 20px;
           margin-left: 400px;
           margin-right: 400px;
-        }     
+        }
 
         .checkbox{
           margin-left: 20px;
           margin-right: 20px;
-        } 
+        }
 
         .Submit_btn{
           margin-bottom: 10px;
@@ -23,7 +23,7 @@
 <title>Upadate Plots & Slot</title>
 
   <body>
-    
+
     <center>
       <div class="Location">
         <div class="card card-plot_slot mx-auto mt-5" >
@@ -35,16 +35,9 @@
               <tbody>
                 <tr class="tr">
                   <div class="form-group" >
-                    <th scope="row" colspan="2" >Place No </th>    
+                    <th scope="row" colspan="2" >Place No </th>
                     <th>
                      <input type="PlaceNo" name="PlaceNo" id="inputplaceno" class="form-control" placeholder="Enter Place Number" value="PlaceNo" required="Please fill out this field">
-                      <!-- <select name="PlaceNo">
-                        <option value="volvo">101</option>
-                        <option value="saab">102</option>
-                        <option value="fiat">103</option>
-                        <option value="audi">104</option>
-                      </select> -->
-
                     </th>  
                   </div>
                 </tr>
@@ -66,7 +59,7 @@
                     <div >
                         <input type="radio" name="VType" value="2 Wheeler" value="VType"> 2 Wheeler&nbsp;&nbsp;&nbsp;
                         <input type="radio" name="VType" value="3 Wheeler" value="VType"> 3 Wheeler&nbsp;&nbsp;&nbsp;
-                        <input type="radio" name="VType" value="4 Wheeler" value="VType"> 4 Wheeler                     
+                        <input type="radio" name="VType" value="4 Wheeler" value="VType"> 4 Wheeler
                     </div>
                   </td>
                 </tr>
@@ -76,15 +69,15 @@
                 </tr>
                 <tr>
                   <th colspan="3"><center><input type="submit" class="btn btn-primary" id="submit" name="Update"></center></th>
-                  
+
                 </tr>
-                                
+
               </tbody>
             </table>
             </form>
         </div>
       </div>
-      
+
     </center>
 
 

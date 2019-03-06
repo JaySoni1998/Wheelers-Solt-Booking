@@ -48,7 +48,7 @@
                 
                 <tr>
                   <td>Birth Date :</td>
-                  <td><input type="DOB" name="DOB" id="inputDOB" class="form-control" placeholder="Enter DOB" required="Please fill out this field"></td>
+                  <td><input type="DOB" name="DOB" id="inputDOB" class="form-control" placeholder="yyyy-mm-dd" required="Please fill out this field"></td>
 
                   <td>Mobile Number :</td>
                   <td><input type="mob_no" name="Mob_No" id="inputMob" class="form-control" placeholder="Enter Mobile Number" required="Please fill out this field"></td>
@@ -57,7 +57,7 @@
 
                 <tr>
                   <td>Joining Date :</td>
-                  <td><input type="JDate" name="Join_Date" id="inputJDate" class="form-control" placeholder="Enter Joining Date required" required="Please fill out this field"></td>
+                  <td><input type="JDate" name="Join_Date" id="inputJDate" class="form-control" placeholder="yyyy-mm-dd" required="Please fill out this field"></td>
 
                   <td>Address :</td>
                   <td><textarea type="Address" name="Address" id="inputAddress" class="form-control" placeholder="Enter Address" required="Please fill out this field""></textarea></td>

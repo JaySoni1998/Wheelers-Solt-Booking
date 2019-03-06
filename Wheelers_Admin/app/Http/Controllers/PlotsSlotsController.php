@@ -28,19 +28,21 @@ class PlotsSlotsController extends Controller
     	//save data  to table
     	$post = add_plots_and_slots::create([
 
-    		"Place_no"=>$request->PlaceNo,
+        "Place_no"=>$request->PlaceNo,
+        "Parking_Place_Name"=>$request->ParkingPlaceName,
+    		"Address"=>$request->Address,
 	    	"Slot_No"=>$request->SlotNo,
 	    	"V_Type"=>$request->VType,
 	    	"No_of_Slot"=>$request->NoOfSlot
     	]);
-    	return redirect('/View_P_S');
+    	return redirect('/View_Plots_&_Slots');
     }
 
     //Show method
-    public function View_P_S(Request $request)
+    public function View_Plots_Slots(Request $request)
     {
     	$posts = add_plots_and_slots::all();
-    	return view('View_P_S')->with('P_S_ViewData',$posts); 
+    	return view('View_Plots_&_Slots')->with('P_S_ViewData',$posts);
     }
 
     //delete
@@ -48,30 +50,43 @@ class PlotsSlotsController extends Controller
     {
 
     	add_plots_and_slots::where('Place_no',$Place_no)->delete();
-    	return redirect('/View_P_S');
+    	return redirect('/View_Plots_&_Slots');
     }
 
     //update
-    public function Update_P_S(Request $request,$Place_no)
+    public function Update_Plots_Slots(Request $request,$Place_no)
     {
-    	
+
     	//$post = add_plots_and_slots::find($Place_no);
 
     	 $post = add_plots_and_slots::where("Place_no",$Place_no)->first();
-    	
-    	return view('Update_P_S')->with('post',$post);
+
+    	return view('Update_Add_Plots_&_Slots')->with('post',$post);
     }
 
     //save update
     public function SaveUpdate_P_S(Request $request)
     {
     	add_plots_and_slots::where("Place_no",$request->Place_no)->update([
-    		"Place_no"=>$request->PlaceNo,
+        "Place_no"=>$request->PlaceNo,
+        "Parking_Place_Name"=>$request->ParkingPlaceName,
+    		"Address"=>$request->Address,
 	    	"Slot_No"=>$request->SlotNo,
 	    	"V_Type"=>$request->VType,
 	    	"No_of_Slot"=>$request->NoOfSlot
     	]);
-    	
-    	return redirect('/View_P_S');
+
+    	return redirect('/View_Plots_&_Slots');
+    }
+
+    //report
+    public function Report_Plots_Slots(Request $request)
+    {
+        //get all data
+        $post = add_plots_and_slots::all();
+        //simple display all data
+        
+
+        return view('Report_Plots_Slots')->with('PlotsSlotspostdata',$post);
     }
 }

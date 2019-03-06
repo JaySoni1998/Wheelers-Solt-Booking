@@ -158,6 +158,7 @@
                     <a class="dropdown-item" href="Report_Location">Location</a>
                     <a class="dropdown-item" href="Report_Package">Packages</a>
                     <a class="dropdown-item" href="Report_Staff">Staff</a>
+                    <a class="dropdown-item" href="Report_Plots_Slots">Plots And Slots</a>
                 </div>
               </li>
 
