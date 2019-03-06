@@ -25,6 +25,8 @@
               <div class="card-header"><b>UPDATE STAFF DETAILS</b></div>
               
               <tbody>
+
+                <input type="hidden" name="StaffId" id="inputFN" class="form-control" value="{{$post->Emp_ID}}">
               
                 <tr>
                   

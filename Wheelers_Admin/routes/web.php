@@ -62,7 +62,7 @@ Route::get('/getLocation','PlotsSlotsController@getLocation');
 Route::post('Add_Plots_&_Slots',"PlotsSlotsController@Add_Plots_&_Slots")->name('P_S_SaveData'); //Add
 Route::get('/View_Plots_&_Slots','PlotsSlotsController@View_Plots_Slots')->name('P_S_ViewData'); //View
 Route::get('/Delete_P_S/{Place_No}','PlotsSlotsController@Delete_P_S')->name('P_S_DeleteData'); //Delete
-Route::get('/Update_Add_Plots_&_Slots/{Place_No}','PlotsSlotsController@Update_Plots_Slots')->name('P_S_UpdateData'); //Update
+Route::get('/Update_Add_Plots_&_Slots/{Place_No}','PlotsSlotsController@Update_Add_Plots_Slots')->name('P_S_UpdateData'); //Update
 Route::post('/SaveUpdate_P_S','PlotsSlotsController@SaveUpdate_P_S')->name('P_S_SaveUpdate'); //Update Save
 
 
@@ -79,3 +79,5 @@ Route::get('/Report_Feedback', 'FeedbackController@Report_Feedback')->name('Feed
 Route::get('/Report_Package', 'PackageController@Report_Package')->name('Packagepostdata'); //View
 Route::get('/Report_Staff', 'StaffController@Report_Staff')->name('Staffpostdata'); //View
 Route::get('/Report_Plots_Slots', 'PlotsSlotsController@Report_Plots_Slots')->name('PlotsSlotspostdata'); //View
+Route::get('/Report_User', 'UserController@Report_user')->name('Userpostdata'); //View
+

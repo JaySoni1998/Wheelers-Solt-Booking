@@ -12,7 +12,7 @@ class add_plots_and_slots extends Model
 
     //all col
     protected $fillable = [
-      "Place_no",
+      "Place_No",
       "Parking_Place_Name",
       "Address",
       "Slot_No",

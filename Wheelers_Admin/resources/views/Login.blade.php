@@ -41,19 +41,12 @@
               <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
             </div>
           </div>
-          <div class="form-group">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" value="remember-me">
-                Remember Password
-              </label>
-            </div>
-          </div>
+          
           <a class="btn btn-primary btn-block" href="home">Login</a>
         </form>
         <div class="text-center">
           
-          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+          <a class="d-block small" href="#">Forgot Password?</a>
         </div>
       </div>
     </div>

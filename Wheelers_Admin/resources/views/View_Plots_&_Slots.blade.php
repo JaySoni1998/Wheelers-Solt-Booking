@@ -49,8 +49,8 @@
 									      <td>{{$post->Slot_No}}</td>
 									      <td>{{$post->V_Type}}</td>
 									      <td>{{$post->No_of_Slot}}</td>
-									      <td><a href="{{route('P_S_DeleteData',['Place_no'=>$post->Place_no])}}">Delete</a></td>
-									      <td><a href="{{route('P_S_UpdateData',['Place_no'=>$post->Place_no])}}">Update</a></td>
+									      <td><a href="{{route('P_S_DeleteData',['Place_No'=>$post->Place_No])}}">Delete</a></td>
+									      <td><a href="{{route('P_S_UpdateData',['Place_No'=>$post->Place_No])}}">Update</a></td>
 								    	</tr>
 							  			@endforeach
 							 		 </tbody>

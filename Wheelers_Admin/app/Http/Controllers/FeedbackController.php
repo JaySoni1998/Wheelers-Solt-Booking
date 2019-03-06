@@ -10,14 +10,11 @@ class FeedbackController extends Controller
     public function View_Feedback(Request $request)
     {
     	//get all data
-    	$posts = feedback::all();
+    	$posts = feedback::with('userget')->get();
     	//simple display all data
-    	return view('View_Feedback')->with('Feedback_ViewData',$posts); 
+        // dd($posts->toArray());
+    	return view('View_Feedback')->with('Feedback_ViewData',$posts)->with('userget',$posts); 
 
-        /*$data = DB::table("feedback")
-          ->select("feedback.U_ID", DB::raw("SELECT user_registration.U_ID FROM user_registration")
-          ->get();
-*/
     }
 
     //delete

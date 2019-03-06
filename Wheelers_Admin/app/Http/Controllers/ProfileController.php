@@ -34,7 +34,8 @@ class ProfileController extends Controller
     	
     	//$post = package_details::find($P_No);
 
-    	profile::where("A_ID",$request->A_ID)->update([
+    	profile::where("A_ID",$request->A_Id)->update([
+            'A_ID'=>$request->A_Id,
     		'A_Name'=>$request->A_Name,
     		'Gender'=>$request->Gender,
     		'A_Add'=>$request->Address,

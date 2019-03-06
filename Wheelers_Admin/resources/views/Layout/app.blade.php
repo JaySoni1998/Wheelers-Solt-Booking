@@ -154,7 +154,8 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Report</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="Report_Feedback">Feedback</a>
+                    <a class="dropdown-item" href="Report_User">Users</a>
+                    <a class="dropdown-item" href="Report_Feedback">Feedback</a>
                     <a class="dropdown-item" href="Report_Location">Location</a>
                     <a class="dropdown-item" href="Report_Package">Packages</a>
                     <a class="dropdown-item" href="Report_Staff">Staff</a>
@@ -172,7 +173,7 @@
                 </div>
                 </div>
               </li>
-              <a class="nav-link" href="notification"> <img src="{{url('Images/notification.png')}}" style="height: 40px; width: 40px; border-radius: 50%"></img></a>
+              <a class="nav-link" href="#"> <img src="{{url('Images/notification.png')}}" style="height: 40px; width: 40px; border-radius: 50%"></img></a>
 
             </ul>
           

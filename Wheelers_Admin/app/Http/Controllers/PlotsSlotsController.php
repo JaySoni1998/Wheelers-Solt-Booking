@@ -13,14 +13,23 @@ class PlotsSlotsController extends Controller
         {
             $Place=location::all();
             return view('Add_Plots_&_Slots')->with('Place',$Place);
+
+            $fill = location::all('Place_No, Parking_Place_Name, Address')->where('Place_No', Place_No)->pluck('Parking_Place_Name, Address');
+
+            return view('pages.information')->with('fill', $fill);
+            
         }
-        public function getLocation(Request $request)
+
+   /* public function getLocation(Request $request)
         {
-            $location=location::where("Location_Name",$request->Place_No)->get();
+            $location=location::where("Parking_Place_Name",$request->Place_No)->get();
             return response()->json([
                 "data"=>$location->toArray()
             ]);
-        }
+
+            
+        }*/
+
 
     //add method here
     public function Add_P_S(Request $request){
@@ -28,8 +37,8 @@ class PlotsSlotsController extends Controller
     	//save data  to table
     	$post = add_plots_and_slots::create([
 
-        "Place_no"=>$request->PlaceNo,
-        "Parking_Place_Name"=>$request->ParkingPlaceName,
+            "Place_No"=>$request->PlaceNo,
+            "Parking_Place_Name"=>$request->ParkingPlaceName,
     		"Address"=>$request->Address,
 	    	"Slot_No"=>$request->SlotNo,
 	    	"V_Type"=>$request->VType,
@@ -46,29 +55,29 @@ class PlotsSlotsController extends Controller
     }
 
     //delete
-    public function Delete_P_S(Request $request,$Place_no)
+    public function Delete_P_S(Request $request,$Place_No)
     {
 
-    	add_plots_and_slots::where('Place_no',$Place_no)->delete();
+    	add_plots_and_slots::where('Place_No',$Place_No)->delete();
     	return redirect('/View_Plots_&_Slots');
     }
 
     //update
-    public function Update_Plots_Slots(Request $request,$Place_no)
+    public function Update_Add_Plots_Slots(Request $request,$Place_No)
     {
 
     	//$post = add_plots_and_slots::find($Place_no);
 
-    	 $post = add_plots_and_slots::where("Place_no",$Place_no)->first();
+    	 $post = add_plots_and_slots::where("Place_No",$Place_No)->first();
 
     	return view('Update_Add_Plots_&_Slots')->with('post',$post);
     }
 
     //save update
-    public function SaveUpdate_P_S(Request $request)
+    public function SaveUpdate_P_S(Request $request,$Place_No)
     {
-    	add_plots_and_slots::where("Place_no",$request->Place_no)->update([
-        "Place_no"=>$request->PlaceNo,
+    	add_plots_and_slots::where("Place_No",$request->Place_No)->update([
+        "Place_No"=>$request->Place_No,
         "Parking_Place_Name"=>$request->ParkingPlaceName,
     		"Address"=>$request->Address,
 	    	"Slot_No"=>$request->SlotNo,

@@ -19,6 +19,12 @@
   body{
     margin-bottom: 50px;
   }
+  th{
+    white-space: nowrap;
+    overflow: hidden;
+    /*width: 50px;*/
+    height: 25px;
+  }
 </style>
 <title>Add New Plots & Slots</title>
 
@@ -47,12 +53,24 @@
 
               <tr>
                 <th scope="row" colspan="2">Place Name</th>
-                <th> <label>-</label> </th>
+                <td>
+                    @foreach($Place as $p)
+                        @if($p->Place_No == 1)
+                           {
+                             <label>{{$p->Parking_Place_Name}}</label>
+                           }
+                        @endif
+                    @endforeach
+                </td>
               </tr>
 
               <tr>
                 <th scope="row" colspan="2">address</th>
-                <th> <label>-</label> </th>
+                <td>
+                    @foreach($Place as $p)
+                    <label>{{$p->Address}}</label>
+                    @endforeach
+                </td>
               </tr>
 
               <tr>

@@ -37,7 +37,7 @@
                   <div class="form-group" >
                     <th scope="row" colspan="2" >Place No </th>
                     <th>
-                     <input type="PlaceNo" name="PlaceNo" id="inputplaceno" class="form-control" placeholder="Enter Place Number" value="PlaceNo" required="Please fill out this field">
+                     <input type="Place_No" name="PlaceNo" id="inputplaceno" class="form-control" placeholder="Enter Place Number" value="PlaceNo" required="Please fill out this field">
                     </th>  
                   </div>
                 </tr>

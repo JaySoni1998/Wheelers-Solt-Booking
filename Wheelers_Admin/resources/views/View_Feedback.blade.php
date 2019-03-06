@@ -39,7 +39,7 @@
 					  	@foreach($Feedback_ViewData as $post)
 					  		<tr>
 						      <th scope="row">{{$post->F_ID}}</th>
-						      <td>{{$post->U_FirstName}}</td>
+						      <td>{{$post->userget->U_FirstName}} {{$post->userget->U_LastName}}</td>
 						      <td>{{$post->Review}}</td>
 						      <td><a href="{{route('Feedback_DeleteData',['F_ID'=>$post->F_ID])}}">Delete</a></td>
 						    </tr>

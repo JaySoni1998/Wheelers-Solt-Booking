@@ -17,4 +17,10 @@ class feedback extends Model
     	"created_at",
     	"updated_at"
     ];
+
+    public function userget()
+    {
+        return $this->belongsTo('App\user_registration','U_ID','U_ID');
+        
+    }
 }

@@ -60,7 +60,8 @@ class StaffController extends Controller
     	
     	//$post = package_details::find($Emp_ID);
 
-    	staff_details::where("Emp_ID",$request->Emp_ID)->update([
+    	staff_details::where("Emp_ID",$request->StaffId)->update([
+            "Emp_ID"=>$request->StaffId,
     		"Emp_Name"=>$request->StaffName,
     		"Gender"=>$request->Gender,
     		"Mob_No"=>$request->Mob_No,

@@ -49,7 +49,10 @@
                   </tr>            
                   <tr>
                     <td>ID :</td>
-                    <td>{{$post->A_ID}}</td>
+                    <td>
+                      <input type="hidden" name="A_Id" id="inputFN" class="form-control" value="{{$post->A_ID}}">
+                      {{$post->A_ID}}
+                    </td>
                   </tr>
                   <tr>
                     <td>Name :</td>

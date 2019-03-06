@@ -117,7 +117,7 @@ body{
                     <td>11:00 AM</td>
                     <td>01:00 PM</td>
                     <td>3 Wheeler</td>
-                    <td>D-Mart</td>
+                    <td>D-Mart (Bapunagar)</td>
                   </tr>
                 </tbody>
               </div>
